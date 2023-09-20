@@ -3,6 +3,7 @@ import { SeedService } from './seed.service';
 import { SeedController } from './seed.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Pokemon, PokemonSchema } from 'src/pokemon/entities/pokemon.entity';
+import { CommonModule } from 'src/common/common.module';
 // import { PokemonModule } from 'src/pokemon/pokemon.module';
 
 @Module({
@@ -15,6 +16,7 @@ import { Pokemon, PokemonSchema } from 'src/pokemon/entities/pokemon.entity';
         schema: PokemonSchema,
       },
     ]),
+    CommonModule,
   ],
 })
 export class SeedModule {}
